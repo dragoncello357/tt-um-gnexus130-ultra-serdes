@@ -1,20 +1,23 @@
----
 # Tiny Tapeout Project Information
-# CHIP: G-NEXUS 130 ULTRA v3
-# AUTHOR: Gabriel D'Amico
-
-documentation:
-  author: "Gabriel D'Amico"
-  title: "G-NEXUS 130 ULTRA v3"
-  description: "14 G-Cores Quad-State logic, UMA 1024-bit bus with 28-pin SerDes and BIOS boot engine"
-  language: "Verilog"
-  clock_hz: 35000000
+yaml_version: 6
 
 project:
-  top_module: "tt_um_gnexus130_ultra_serdes"
+  title:        "G-NEXUS 130 ULTRA v3"
+  author:       "Gabriel D'Amico"
+  discord:      ""
+  description:  "14 G-Cores Quad-State logic, UMA 1024-bit bus with 28-pin SerDes and BIOS boot engine"
+  language:     "Verilog"
+  clock_hz:     35000000
+  tiles:        "1x1"
+
+  # Nome del modulo top-level
+  top_module:   "tt_um_gnexus130_ultra_serdes"
+
+  # Elenco dei file Verilog
   source_files:
     - "tt_um_gnexus130_ultra_serdes.v"
 
+# Mappatura dei 28 pin
 pinout:
   ui[0]: "CLK_REF"
   ui[1]: "RST_N"
