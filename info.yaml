@@ -1,56 +1,43 @@
-# Tiny Tapeout project information
+# Tiny Tapeout Project Information
+# CHIP: G-NEXUS 130 ULTRA v3
+# AUTHOR: Gabriel D'Amico
+
+documentation:
+  author: "Gabriel D'Amico"
+  title: "G-NEXUS 130 ULTRA v3"
+  description: "14 G-Cores Quad-State logic, UMA 1024-bit bus with 28-pin SerDes and BIOS boot engine"
+  language: "Verilog"
+  clock_hz: 35000000
+
 project:
-  title:        ""      # Project title
-  author:       ""      # Your name
-  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  ""      # One line description of what your project does
-  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
-  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
-
-  # How many tiles your design occupies? A single tile is about 167x108 uM.
-  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
-
-  # Your top module name must start with "tt_um_". Make it unique by including your github username:
-  top_module:  "tt_um_example"
-
-  # List your project's source files here.
-  # Source files must be in ./src and you must list each source file separately, one per line.
-  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
+  top_module: "tt_um_gnexus130_ultra_serdes"
   source_files:
-    - "project.v"
+    - "tt_um_gnexus130_ultra_serdes.v"
 
-# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
-# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
 pinout:
-  # Inputs
-  ui[0]: ""
-  ui[1]: ""
-  ui[2]: ""
-  ui[3]: ""
-  ui[4]: ""
-  ui[5]: ""
-  ui[6]: ""
-  ui[7]: ""
+  ui[0]: "CLK_REF"
+  ui[1]: "RST_N"
+  ui[2]: "BOOT_MODE0"
+  ui[3]: "BOOT_MODE1"
+  ui[4]: "SERDES_RX0"
+  ui[5]: "SERDES_RX1"
+  ui[6]: "SERDES_RX2"
+  ui[7]: "SERDES_RX3"
 
-  # Outputs
-  uo[0]: ""
-  uo[1]: ""
-  uo[2]: ""
-  uo[3]: ""
-  uo[4]: ""
-  uo[5]: ""
-  uo[6]: ""
-  uo[7]: ""
+  uo[0]: "SERDES_TX0"
+  uo[1]: "SERDES_TX1"
+  uo[2]: "SERDES_TX2"
+  uo[3]: "SERDES_TX3"
+  uo[4]: "VIDEO_TMDS_P"
+  uo[5]: "VIDEO_TMDS_N"
+  uo[6]: "BIOS_SPI_CLK"
+  uo[7]: "STATUS_LOCK"
 
-  # Bidirectional pins
-  uio[0]: ""
-  uio[1]: ""
-  uio[2]: ""
-  uio[3]: ""
-  uio[4]: ""
-  uio[5]: ""
-  uio[6]: ""
-  uio[7]: ""
-
-# Do not change!
-yaml_version: 6
+  uio[0]: "QSPI_DATA0"
+  uio[1]: "QSPI_DATA1"
+  uio[2]: "QSPI_DATA2"
+  uio[3]: "QSPI_DATA3"
+  uio[4]: "LPDDR_CTRL0"
+  uio[5]: "LPDDR_CTRL1"
+  uio[6]: "LPDDR_CTRL2"
+  uio[7]: "SYS_INTERRUPT"
