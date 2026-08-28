@@ -5,7 +5,8 @@
   ],
   "CLOCK_PORT": "clk",
   "CLOCK_PERIOD": 10.0,
-  "PDK": "sky130_fd_sc_hd",
+  "PDK": "sky130A",
+  "STD_CELL_LIBRARY": "sky130_fd_sc_hd",
 
   "DIE_AREA": "0 0 100 160",
   "CORE_AREA": "6 6 94 154",
